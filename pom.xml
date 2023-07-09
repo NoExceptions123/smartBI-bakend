@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lft</groupId>
-    <artifactId>lftapi-backend</artifactId>
+    <artifactId>smartBI-bakend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>smartBI-bakend</name>
     <description>智能BI项目后台</description>

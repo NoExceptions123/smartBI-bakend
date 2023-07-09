@@ -6,11 +6,11 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
-*@Pakage com.lft.springbootinit.model.vo
-*@auther 邮专第一深情
-*@date 2023/7/8
-*@Description   已登录用户视图（脱敏）
-*/
+ * @Pakage com.lft.springbootinit.model.vo
+ * @auther 邮专第一深情
+ * @date 2023/7/8
+ * @Description 已登录用户视图（脱敏）
+ */
 @Data
 public class LoginUserVO implements Serializable {
 
@@ -28,11 +28,6 @@ public class LoginUserVO implements Serializable {
      * 用户头像
      */
     private String userAvatar;
-
-    /**
-     * 用户简介
-     */
-    private String userProfile;
 
     /**
      * 用户角色：user/admin/ban
