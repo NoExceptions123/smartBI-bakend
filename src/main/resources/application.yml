@@ -1,4 +1,12 @@
 spring:
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
   application:
     name: lftapi-backend
   # 默认 dev 环境
@@ -12,7 +20,7 @@ spring:
   session:
     timeout: 2592000
     # todo 取消注释开启分布式 session（须先配置 Redis）
-    store-type: redis
+    #store-type: redis
     # 30 天过期
 
   # 数据库配置
@@ -31,13 +39,20 @@ spring:
     port: 6379
     timeout: 5000
 
+  redisson:
+    database: 2
+    host: localhost
+    port: 6379
+
+
   # 文件上传
   servlet:
     multipart:
       # 大小限制
       max-file-size: 10MB
+
 server:
-  address: 0.0.0.0
+  address: localhost
   port: 8080
   servlet:
     context-path: /smart-bi
@@ -45,6 +60,7 @@ server:
     session:
       cookie:
         max-age: 2592000
+
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false
@@ -54,3 +70,8 @@ mybatis-plus:
       logic-delete-field: isDelete # 全局逻辑删除的实体字段名
       logic-delete-value: 1 # 逻辑已删除值（默认为 1）
       logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
+
+yuapi:
+  client:
+    access-key: hrglxr6jo838hd1vzwzcbj1mmmjt8xu6
+    secret-key: 7ql7nutarhb6lgcb6zfmussidi2vbwup
